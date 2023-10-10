@@ -1,0 +1,261 @@
+/* style_post.css */
+
+/* Body styles */
+body {
+  font-family: "Libre Franklin", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Title styles */
+h1 {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 32px;
+  margin: 0;
+}
+
+/* Menu styles */
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.menu li:hover {
+  color: #ff5733; /* Change color on hover */
+}
+
+/* Content Container styles */
+.content-container {
+  margin: 20px;
+}
+
+/* Content Section styles */
+.content-section {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Toolbar Button styles */
+.toolbar-button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toolbar-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Form styles */
+form {
+  margin-top: 10px;
+}
+
+input[type="text"],
+textarea,
+input[type="file"],
+input[type="url"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  background-color: #ff5733;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #e5472c;
+}
+
+/* Toolbar Button icons styles */
+.toolbar-button strong,
+.toolbar-button em,
+.toolbar-button u {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* CSS for text box with toolbar */
+.text-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  min-height: 150px;
+}
+
+/* Add CSS for menu items */
+.menu li {
+  cursor: pointer;
+}
+
+/* Add CSS for content sections */
+.content-section {
+  display: none;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Add CSS for toolbar */
+.toolbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.toolbar-button {
+  margin: 0 5px;
+}
+
+/* Add CSS for text box with toolbar */
+.text-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Add CSS for text area */
+textarea {
+  width: 100%;
+  height: 150px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+/* Add CSS for title */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Add CSS for header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Add CSS for search bar */
+.search-bar {
+  margin: 0 10px;
+  width: 200px; /* ปรับความยาวตามที่คุณต้องการ */
+}
+
+.profile_box {
+  color: #000;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  background: #ffffff;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.5s;
+  border: none;
+  position: absolute;
+  top: -20px; /* ปรับตำแหน่งของปุ่มด้านบน */
+  right: 140px; /* ปรับตำแหน่งของปุ่มด้านขวา */
+}
+
+.profile_box a {
+  text-decoration: none;
+}
+.profile {
+  position: relative;
+}
+
+.profile_checkbox {
+  display: none;
+}
+
+.profile_button {
+  cursor: pointer;
+  position: relative;
+}
+
+.options_icon:hover,
+.options_icon:focus {
+  color: #3e454b;
+  background: transparent;
+  border: none;
+  box-shadow: rgb(255, 255, 255) 0 1px 20px;
+  transition-duration: 0.5s;
+}
+
+.options_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: -20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile_checkbox:checked + .profile_button .options_menu {
+  display: block;
+}
+
+.options_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options_menu li {
+  padding: 10px;
+  text-align: center;
+}
+
+.options_menu a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.options_menu a:hover,
+.options_icon:focus {
+  color: #6e6a6a;
+  background: transparent;
+  border: none;
+  box-shadow: rgb(83, 81, 81) 0 1px 20px;
+  transition-duration: 0.4s;
+  background-color: #000000;
+}

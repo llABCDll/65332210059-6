@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin
+            :ital@1&family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+    <title>HOME</title>
+</head>
+<body>
+
+    <header>
+        <h1>LEGO</h1>
+        <nav class="top">
+            
+            <a href="home.html">HOME</a>
+            <a href="forum.php">FORUM</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+            
+        </nav>
+
+        
+        <button  class="btnn" onclick="window.location.href='http://localhost/form/login.php';">Login</button>
+        
+        
+        
+    </header>
+
+    <div class="bg">
+
+        <div class="content">
+    
+                <h1>ภาคเหนือ</h1>
+                <p> ภาคเหนือของประเทศไทย มีลักษณะภูมิประเทศที่เป็นเขตภูเขาสลับกับพื้นที่ราบระหว่างภูเขา ซึ่งจะมีผู้คนอาศัยกระจายกันเป็นกลุ่ม 
+                    ซึ่งจะเรียกว่ากลุ่มวัฒนธรรมล้านนา&nbsp;&nbsp;&nbsp;<a href="webpage.html">อ่านเพิ่มเติม >></a></p>
+                <div class="bnt_login"><button  class="btnn" onclick="window.location.href='http://localhost/form/login.php';">Login</button></div>
+            
+        </div>   
+        
+        </div>
+
+        <!-- <script>
+            // ตรวจสอบ Cookie
+            if (document.cookie.includes("registration_success=1")) {
+                alert("สมัครสมาชิกเรียบร้อย");
+                // ลบ Cookie
+                document.cookie = "registration_success=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            }
+        </script> -->
+        
+
+        <!-- เพิ่มโค้ด JavaScript เพื่อแสดง Popup -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            // รอให้หน้าเว็บโหลดเสร็จก่อนที่จะเรียกใช้ SweetAlert
+            window.onload = function() {
+                // ตรวจสอบว่ามีคุณสมบัติ registration_success ในคุกกี้หรือไม่
+                if (document.cookie.indexOf('registration_success=1') !== -1) {
+                    // ใช้ SweetAlert แสดงข้อความสำเร็จ
+                    Swal.fire({
+                        title: 'สมัครสมาชิกเรียบร้อยแล้ว',
+                        text: 'ยินดีต้อนรับเข้าสู่เว็บไซต์ของเรา,คุณสามารถเข้าสู่ระบบได้แล้ว',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // หากคลิก OK ให้ลบคุกกี้ registration_success และเปลี่ยนเส้นทางไปยังหน้า home.html
+                            document.cookie = "registration_success=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                            window.location.href = 'home.html';
+                        }
+                    });
+                }
+            };
+        </script>
+        
+
+
+</body>
+</html>
