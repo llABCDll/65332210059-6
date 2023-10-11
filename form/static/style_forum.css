@@ -1,0 +1,604 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("pic/home.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  background: transparent;
+
+}
+
+header h1 {
+  color: #fff;
+}
+
+.top {
+  position: relative;
+  left: 100px;
+  display: flex; /* ใช้ Flexbox เพื่อจัดหน้าตา */
+  justify-content: center; /* จัดให้เนื้อหาอยู่ตรงกลางแนวนอน */
+  align-items: center; /* จัดให้เนื้อหาอยู่ตรงกลางแนวตั้ง */
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.top a {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.top a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.top a:hover::after {
+  transform: scaleX(1);
+}
+
+.btnn {
+  color: #ffffff;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  background: #ffffff;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.5s;
+  border: none;
+  position: absolute;
+  top: 24px;
+  right: 100px;
+}
+
+.btnn:hover {
+  color: #000;
+  background: #fff;
+  border: none;
+  box-shadow: rgb(255, 255, 255) 0 1px 20px;
+  transition-duration: 0.1s;
+}
+
+.btnn a {
+  color: #000;
+  text-decoration: none;
+}
+
+.content {
+  min-width: 80%;
+  margin-top: 150px;
+}
+
+.content .box1 {
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  height: 400px;
+  background: #00000086;
+  background-size: cover;
+}
+
+.content .box2 {
+  margin-top: 50px;
+  text-align: center;
+  background-size: cover;
+  height: 300px;
+  background: #ffffff86;
+  background-size: cover;
+}
+
+.profile_box {
+  color: #000;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  background: #ffffff;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.5s;
+  border: none;
+  position: absolute;
+  top: -20px; /* ปรับตำแหน่งของปุ่มด้านบน */
+  right: 200px; /* ปรับตำแหน่งของปุ่มด้านขวา */
+}
+
+.profile_box a {
+  text-decoration: none;
+}
+.profile {
+  position: relative;
+}
+
+.profile_checkbox {
+  display: none;
+}
+
+.profile_button {
+  cursor: pointer;
+  position: relative;
+}
+
+.options_icon:hover,
+.options_icon:focus {
+  color: #3e454b;
+  background: transparent;
+  border: none;
+  box-shadow: rgb(255, 255, 255) 0 1px 20px;
+  transition-duration: 0.5s;
+}
+
+.options_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: -20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile_checkbox:checked + .profile_button .options_menu {
+  display: block;
+}
+
+.options_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options_menu li {
+  padding: 10px;
+  text-align: center;
+}
+
+.options_menu a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.options_menu a:hover,
+.options_icon:focus {
+  color: #6e6a6a;
+  background: transparent;
+  border: none;
+  box-shadow: rgb(83, 81, 81) 0 1px 20px;
+  transition-duration: 0.4s;
+  background-color: #000000;
+}
+
+.main-hr {
+  width: 30%;
+  border: none;
+  border-top: 1px solid #c3c3c3;
+}
+
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+}
+
+button.icon-btn.add-btn {
+  position: relative; /* ตั้งค่าให้มีตำแหน่งแบบสัมพันธ์ */
+  left: 15px; /* ขยับไปทางขวา 20px */
+}
+
+.add-btn:hover {
+  width: 120px;
+}
+
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: red;
+}
+
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.icon-btn:focus {
+  outline: none;
+}
+
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background: red;
+  overflow: hidden;
+}
+
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+
+.create-post {
+  margin-right: 100px; /* เพิ่มระยะห่างข้างขวาของ .create-post */
+  
+}
+
+.post-section1 {
+  margin-top: 100px;
+  width: 800px;
+  margin-left: 20px; /* เพิ่มระยะห่างข้างซ้ายของ .post-section */
+  background-color: #fff; /* พื้นหลังสีขาวสำหรับโพสต์ */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  height: auto; /* กำหนดความสูงเป็น auto เพื่อให้ความสูงขยายหรือลดลงตามเนื้อหา */
+}
+
+
+/* CSS สำหรับโพสต์ */
+.post {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.post h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.post p {
+  font-size: 16px;
+}
+
+.post p:last-child {
+  margin-bottom: 0;
+}
+
+/* CSS สำหรับปุ่ม Comment, Like, Edit */
+.like-btn,
+.comment-btn,
+.edit-btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* CSS สำหรับกล่องความคิดเห็น */
+.comments {
+  margin-top: 10px;
+}
+
+.comment {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.comment .reply-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* CSS สำหรับการตอบกลับ */
+.reply {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.reply p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* เพิ่มสไตล์ให้กับ div.summary */
+.summary {
+  background-color: #f2f2f2; /* สีพื้นหลัง */
+  padding: 10px; /* ระยะขอบภายใน */
+  margin: 10px 0; /* ระยะขอบภายนอก */
+  border: 1px solid #ddd; /* เส้นขอบ */
+  border-radius: 5px; /* มุมมน */
+}
+
+/* สไตล์ข้อความภายใน div.summary */
+.summary p {
+  margin: 5px 0; /* ระยะห่างระหว่างข้อความ */
+  font-size: 16px; /* ขนาดตัวอักษร */
+}
+
+/* สไตล์สีข้อความ Total Posts และ Total Comments */
+.summary p:first-child {
+  color: #007bff; /* สีข้อความสำหรับ Total Posts */
+}
+
+.summary p:last-child {
+  color: #28a745; /* สีข้อความสำหรับ Total Comments */
+}
+
+.btn-compose {
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: none;
+  position: relative;
+  background-color: #DB4437;
+  box-shadow: 2px 3px 3px #999
+}
+
+.line {
+  height: 14px;
+  width: 120px;
+  border-radius: 2px;
+  display: inline-block;
+  background-color: #fff;
+  position: absolute;
+}
+
+.line:after {
+  content: " ";
+  display: inline-block;
+  border-left: 10px solid #fff;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  right: 0px;
+  animation: pencil_point 1.5s 0s alternate infinite;
+}
+
+.line:before {
+  content: " ";
+  display: inline-block;
+  width: 14px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 4px 0 0 4px;
+  position: absolute;
+  left: -16px;
+  animation: eraser 1.5s 0s alternate infinite;
+}
+
+.line-vertical {
+  transform: translateX(-60px) rotateZ(90deg);
+  animation: rotate_vertical 1.5s 0s alternate infinite;
+}
+
+.line-horizontal {
+  animation: rotate_horizontal 1.5s 0s alternate infinite;
+}
+
+@keyframes rotate_horizontal {
+  from {
+    transform: translateX(-60px) rotateZ(0);
+  }
+  to {
+    transform: translateX(-60px) rotateZ(135deg);
+    height: 18px;
+  }
+}
+
+@keyframes rotate_vertical {
+  33% {
+    transform: translateX(-60px) rotateZ(90deg)
+  }
+  to {
+    transform: translateX(-60px) rotateZ(135deg);
+    height: 18px;
+  }
+}
+
+@keyframes pencil_point {
+  from {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+    right: 0px
+  }
+  to {
+    opacity: 1;
+    right: -12px;
+  }
+}
+
+@keyframes eraser {
+  from {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+    left: 0px
+  }
+  to {
+    opacity: 1;
+    left: -22px;
+  }
+}
+
+.post-section {
+  margin-top: 100px;
+  width: 800px;
+  margin-left: 20px; /* เพิ่มระยะห่างข้างซ้ายของ .post-section */
+  background-color: #fff; /* พื้นหลังสีขาวสำหรับโพสต์ */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  height: auto; /* กำหนดความสูงเป็น auto เพื่อให้ความสูงขยายหรือลดลงตามเนื้อหา */
+}
+
+.post-section{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+  box-shadow: rgba(17, 17, 26, 0.5) 0px 4px 16px, 
+              rgba(17, 17, 26, 0.5) 0px 8px 24px, 
+              rgba(17, 17, 26, 0.5) 0px 16px 56px;
+}
+
+.post-section h2{
+  font-size: 30px;
+  margin: 20px;
+}
+
+.btn {
+  margin: 10px;
+  font-size: 16px;
+  width: 120px;
+  height: 40px;
+  border: none;
+  margin-left: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #4d5e72;
+  color: #fff;
+}
+
+.btn:hover {
+  background: #69809b;
+}
+
+.title input{
+  display: flex;
+  height: 50px;
+  width: 760px;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 10px;
+  background: #eceeee;
+  border-radius: 10px;
+  border: none;
+}
+
+.content1 textarea{
+  display: flex;
+  height: 100px;
+  width: 760px;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 10px;
+  background: #eceeee;
+  border-radius: 10px;
+  border: none;
+}
+
+p{
+  margin-top: 20px;
+  display: flex;
+  font-size: 24px;
+  margin-left: 20px;
+}
